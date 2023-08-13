@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/home"
+        android:name="com.cz.czbazzar.fragment.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_home_to_cart"
+            app:destination="@id/cart" />
+        <action
+            android:id="@+id/action_home_to_catagory"
+            app:destination="@id/catagory" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.cz.czbazzar.fragment.cart"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_cart_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.cz.czbazzar.fragment.profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_profile_to_cart"
+            app:destination="@id/cart" />
+        <action
+            android:id="@+id/action_profile_to_cart2"
+            app:destination="@id/cart" />
+    </fragment>
+    <activity
+        android:id="@+id/catagory"
+        android:name="com.cz.czbazzar.Catagory"
+        android:label="activity_catatory"
+        tools:layout="@layout/activity_catatory" />
+</navigation>
